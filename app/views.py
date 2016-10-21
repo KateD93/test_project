@@ -10,7 +10,6 @@ import os
 import git
 import glob
 
-
 def clone_git_repo():
     err_code, output = commands.getstatusoutput('git clone git@github.com:KateD93/robbed_bank_account.git')
     if err_code != 0:
@@ -76,7 +75,7 @@ def write_file(fn, content_yaml):
 
 
 def process_file(fn):
-    content_yaml = yaml.load(open('robbed_bank_account/‘ + fn))
+    content_yaml = yaml.load(open('robbed_bank_account/' + fn))
     update_yaml(content_json, content_yaml)
     write_file('robbed_bank_account/' + fn, content_yaml)
 
